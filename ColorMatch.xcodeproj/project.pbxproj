@@ -11,6 +11,9 @@
 		173A0BFA28FC2B2A000DABD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0BF928FC2B2A000DABD4 /* ContentView.swift */; };
 		173A0BFC28FC2B2B000DABD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */; };
 		173A0BFF28FC2B2B000DABD4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173A0BFE28FC2B2B000DABD4 /* Preview Assets.xcassets */; };
+		173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0728FC3B8E000DABD4 /* PlayView.swift */; };
+		173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */; };
+		173A0C0E28FC420A000DABD4 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		173A0BF928FC2B2A000DABD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173A0BFE28FC2B2B000DABD4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		173A0C0728FC3B8E000DABD4 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
+		173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		173A0BF628FC2B2A000DABD4 /* ColorMatch */ = {
 			isa = PBXGroup;
 			children = (
+				173A0C0928FC3C18000DABD4 /* Views */,
 				173A0BF728FC2B2A000DABD4 /* ColorMatchApp.swift */,
 				173A0BF928FC2B2A000DABD4 /* ContentView.swift */,
 				173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */,
@@ -65,6 +72,24 @@
 				173A0BFE28FC2B2B000DABD4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		173A0C0928FC3C18000DABD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				173A0C0A28FC3C2F000DABD4 /* Play */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		173A0C0A28FC3C2F000DABD4 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				173A0C0728FC3B8E000DABD4 /* PlayView.swift */,
+				173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */,
+				173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */,
+			);
+			path = Play;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */,
 				173A0BFA28FC2B2A000DABD4 /* ContentView.swift in Sources */,
+				173A0C0E28FC420A000DABD4 /* PlayViewModel.swift in Sources */,
+				173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */,
 				173A0BF828FC2B2A000DABD4 /* ColorMatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +301,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +330,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,74 @@
+//
+//  PlayView.swift
+//  ColorMatch
+//
+//  Created by 青原光 on 2022/10/16.
+//
+
+import SwiftUI
+
+struct PlayView: View {
+    @EnvironmentObject var model: PlayViewModel
+    @State private var count = 15
+    @State private var isEnabled = true
+    
+    var body: some View {
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("\(count)")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                HStack {
+                    Circle()
+                        .foregroundColor(Color(red: model.correctColor.red / 255, green: model.correctColor.green / 255, blue: model.correctColor.blue / 255))
+                    
+                    Circle()
+                        .foregroundColor(Color(red: model.userColor.red / 255, green: model.userColor.green / 255, blue: model.userColor.blue / 255))
+                }
+                
+                Spacer()
+                
+                Button("Start") {
+                    isEnabled.toggle()
+                    
+                    model.correctColor = (Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)))
+                    model.userColor = (0, 0, 0)
+                    
+                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                        count -= 1
+                        if count <= 0 {
+                            timer.invalidate()
+                            count = 15
+                            isEnabled.toggle()
+                        }
+                    }
+                }
+                .disabled(!isEnabled)
+                .opacity(isEnabled ? 1 : 0.5)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                
+                Spacer()
+                
+                ColorSlider(color: "red")
+                ColorSlider(color: "green")
+                ColorSlider(color: "blue")
+                
+                Spacer()
+            }
+        }
+    }
+}
+
+struct PlayView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlayView()
+            .environmentObject(PlayViewModel())
+    }
+}
