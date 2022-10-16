@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View {    
     var body: some View {
-        VStack {
-            PlayView()
-        }
-        .environmentObject(PlayViewModel())
+        PlayView()
+            .environmentObject(PlayViewModel())
     }
 }
 

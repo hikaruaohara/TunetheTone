@@ -14,6 +14,7 @@
 		173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0728FC3B8E000DABD4 /* PlayView.swift */; };
 		173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */; };
 		173A0C0E28FC420A000DABD4 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */; };
+		173A0C1428FC5C07000DABD4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C1328FC5C07000DABD4 /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		173A0C0728FC3B8E000DABD4 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		173A0C1328FC5C07000DABD4 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		173A0C0928FC3C18000DABD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				173A0C1228FC5BF5000DABD4 /* Result */,
 				173A0C0A28FC3C2F000DABD4 /* Play */,
 			);
 			path = Views;
@@ -90,6 +93,14 @@
 				173A0C0D28FC420A000DABD4 /* PlayViewModel.swift */,
 			);
 			path = Play;
+			sourceTree = "<group>";
+		};
+		173A0C1228FC5BF5000DABD4 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				173A0C1328FC5C07000DABD4 /* ResultView.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				173A0C0E28FC420A000DABD4 /* PlayViewModel.swift in Sources */,
 				173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */,
 				173A0BF828FC2B2A000DABD4 /* ColorMatchApp.swift in Sources */,
+				173A0C1428FC5C07000DABD4 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
