@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct ColorMatchApp: App {
+    @StateObject var model = Model()
+    @StateObject var playViewModel = PlayModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                switch model.presentation {
+                case 0:
+                    PlayView()
+                case 1:
+                    ResultView()
+                default:
+                    Text("error")
+                }
+            }
+            .environmentObject(model)
+            .environmentObject(playViewModel)
         }
     }
 }
