@@ -43,6 +43,7 @@ struct ResultView: View {
                     .bold()
                 
                 Spacer()
+                Spacer()
                 
                 Button("Next") {
                     playModel.correctColor = (0, 0, 0)
@@ -52,6 +53,8 @@ struct ResultView: View {
                 .foregroundColor(.white)
                 .font(.largeTitle)
                 .bold()
+                
+                Spacer()
             }
         }
     }
