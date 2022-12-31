@@ -9,65 +9,91 @@ import SwiftUI
 
 struct AnswerCell: View {
     @EnvironmentObject var playModel: PlayModel
-    let target: String
+    enum Target {
+        case correct
+        case user
+    }
+    let target: Target
     
     var body: some View {
-        let colors = target == "correct" ? playModel.correctColor : playModel.userColor
-        let title = target == "correct" ? "Correct\nAnswer" : "Your\nAnswer"
-
-        VStack {
-            Spacer()
-            Text(title)
-                .multilineTextAlignment(.center)
-                .font(.largeTitle)
-                .foregroundColor(.white)
-            
-            Spacer()
-            
-            Circle()
-                .foregroundColor(Color(red: colors.red / 255, green: colors.green / 255, blue: colors.blue / 255))
-            
-            Spacer()
-            
-            HStack {
-                Circle()
-                    .foregroundColor(.red)
-                    .frame(width: 20)
+        switch target {
+        case .correct:
+            let colors = playModel.correctColor
+            VStack {
+                Spacer()
+                Text("Correct\nAnswer")
+                    .multilineTextAlignment(.center)
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
                 
-                Text(String(format: "%.0f", colors.red))
-                    .foregroundColor(.red)
-                    .frame(width: 40)
-            }
-                            
-            HStack {
-                Circle()
-                    .foregroundColor(.green)
-                    .frame(width: 20)
+                Spacer()
                 
-                Text(String(format: "%.0f", colors.green))
-                    .foregroundColor(.green)
-                    .frame(width: 40)
-            }
-                            
-            HStack {
                 Circle()
-                    .foregroundColor(.blue)
-                    .frame(width: 20)
+                    .foregroundColor(Color(red: colors.red / 255, green: colors.green / 255, blue: colors.blue / 255))
                 
-                Text(String(format: "%.0f", colors.blue))
-                    .foregroundColor(.blue)
-                    .frame(width: 40)
+                Spacer()
+                
+                RGBValueCell(color: .red, value: colors.red)
+                RGBValueCell(color: .green, value: colors.green)
+                RGBValueCell(color: .blue, value: colors.blue)
+                
+                Spacer()
             }
-            
-            Spacer()
+            .bold()
+        case .user:
+            let colors = playModel.userColor
+            VStack {
+                Spacer()
+                Text("Your\nAnswer")
+                    .multilineTextAlignment(.center)
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Circle()
+                    .foregroundColor(Color(red: colors.red / 255, green: colors.green / 255, blue: colors.blue / 255))
+                
+                Spacer()
+                
+                VStack (alignment: .leading) {
+                    HStack {
+                        RGBValueCell(color: .red, value: colors.red)
+                        Text(getErrorText(userValue: colors.red, correctValue:playModel.correctColor.red))
+                    }
+                    
+                    HStack {
+                        RGBValueCell(color: .green, value: colors.green)
+                        Text(getErrorText(userValue: colors.green, correctValue:playModel.correctColor.green))
+                    }
+                    
+                    HStack {
+                        RGBValueCell(color: .blue, value: colors.blue)
+                        Text(getErrorText(userValue: colors.blue, correctValue:playModel.correctColor.blue))
+                    }
+                }
+                
+                Spacer()
+            }
+            .bold()
         }
-        .bold()
     }
 }
 
-struct AnserCell_Previews: PreviewProvider {
+struct AnswerCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerCell(target: "correct")
+        AnswerCell(target: .user)
             .environmentObject(PlayModel())
+    }
+}
+
+func getErrorText(userValue: Double, correctValue: Double) -> String {
+    let error = Int(userValue - correctValue)
+    if error > 0 {
+        return "(+\(error))"
+    } else if error < 0 {
+        return "(\(error))"
+    } else {
+        return "(±0)"
     }
 }

@@ -22,26 +22,23 @@ struct ResultView: View {
                 HStack {
                     Spacer()
                     
-                    AnswerCell(target: "correct")
+                    AnswerCell(target: .correct)
+                        .frame(maxWidth: UIScreen.main.bounds.width / 2)
                     
                     Spacer()
                     
-                    AnswerCell(target: "user")
+                    AnswerCell(target: .user)
+                        .frame(maxWidth: UIScreen.main.bounds.width / 2)
                     
                     Spacer()
-                }
+                }                
                 
-                Spacer()
-                
-                (Text("Score: ") + Text(String(format: "%.0f", playModel.getScore())).foregroundColor(.yellow))
+                (Text(String(format: "%.1f%% ", playModel.getMatchingRate())).foregroundColor(.yellow) + Text(" Matched!!"))
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .bold()
                 
-                (Text(String(format: "%.1f%% ", playModel.getMatchingRate())) + Text(" Matched!!"))
-                    .foregroundColor(.white)
-                    .bold()
-                
+                Spacer()
                 Spacer()
                 Spacer()
                 
