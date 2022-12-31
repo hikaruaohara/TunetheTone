@@ -1,10 +1,3 @@
-//
-//  AnswerCell.swift
-//  ColorMatch
-//
-//  Created by 青原光 on 2022/10/18.
-//
-
 import SwiftUI
 
 struct AnswerCell: View {

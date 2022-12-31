@@ -1,14 +1,7 @@
-//
-//  ColorMatchApp.swift
-//  ColorMatch
-//
-//  Created by 青原光 on 2022/10/16.
-//
-
 import SwiftUI
 
 @main
-struct ColorMatchApp: App {
+struct TunetheToneApp: App {
     @StateObject var model = Model()
     @StateObject var playViewModel = PlayModel()
     

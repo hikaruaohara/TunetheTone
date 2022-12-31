@@ -1,10 +1,3 @@
-//
-//  ResultView.swift
-//  ColorMatch
-//
-//  Created by 青原光 on 2022/10/17.
-//
-
 import SwiftUI
 
 struct ResultView: View {
