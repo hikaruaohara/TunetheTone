@@ -2,60 +2,88 @@ import SwiftUI
 
 struct ColorSlider: View {
     @EnvironmentObject var playModel: PlayModel
-    
-    let color: String
+    let color: Color
     
     var body: some View {
         HStack {
             Spacer()
-            
-            if color == "red" {
+
+            switch color {
+            case .red:
                 Circle()
-                    .foregroundColor(.red)
-                    .frame(width: 20)
+                    .foregroundColor(color)
+                    .frame(width: 30)
+                    .onTapGesture {
+                        playModel.userColor.red = max(0, playModel.userColor.red - 1)
+                    }
                 
                 Spacer()
                 
                 Slider(value: $playModel.userColor.red, in: 0 ... 255, step: 1)
-                    .accentColor(.red)
+                    .tint(color)
+                    .onChange(of: playModel.userColor.red) { _ in
+                        playHaptic()
+                    }
                 
                 Spacer()
-                
+                                
                 Text(String(format: "%.0f", playModel.userColor.red))
-                    .frame(width: 40)
-                    .foregroundColor(.red)
-            } else if color == "green" {
+                                    .frame(width: 40)
+                                    .foregroundColor(color)
+                                    .onTapGesture {
+                                        playModel.userColor.red = min(playModel.userColor.red + 1, 255)
+                                    }
+            case .green:
                 Circle()
-                    .foregroundColor(.green)
-                    .frame(width: 20)
+                    .foregroundColor(color)
+                    .frame(width: 30)
+                    .onTapGesture {
+                        playModel.userColor.green = max(0, playModel.userColor.green - 1)
+                    }
                 
                 Spacer()
                 
                 Slider(value: $playModel.userColor.green, in: 0 ... 255, step: 1)
-                    .accentColor(.green)
+                    .tint(color)
+                    .onChange(of: playModel.userColor.green) { _ in
+                        playHaptic()
+                    }
                 
                 Spacer()
                 
                 Text(String(format: "%.0f", playModel.userColor.green))
-                    .frame(width: 40)
-                    .foregroundColor(.green)
-            } else if color == "blue" {
+                                    .frame(width: 40)
+                                    .foregroundColor(color)
+                                    .onTapGesture {
+                                        playModel.userColor.green = min(playModel.userColor.green + 1, 255)
+                                    }
+            case .blue:
                 Circle()
-                    .foregroundColor(.blue)
-                    .frame(width: 20)
+                    .foregroundColor(color)
+                    .frame(width: 30)
+                    .onTapGesture {
+                        playModel.userColor.blue = max(0, playModel.userColor.blue - 1)
+                    }
                 
                 Spacer()
                 
                 Slider(value: $playModel.userColor.blue, in: 0 ... 255, step: 1)
-                    .accentColor(.blue)
+                    .tint(color)
+                    .onChange(of: playModel.userColor.blue) { _ in
+                        playHaptic()
+                    }
                 
                 Spacer()
                 
                 Text(String(format: "%.0f", playModel.userColor.blue))
-                    .frame(width: 40)
-                    .foregroundColor(.blue)
+                                    .frame(width: 40)
+                                    .foregroundColor(color)
+                                    .onTapGesture {
+                                        playModel.userColor.blue = min(playModel.userColor.blue + 1, 255)
+                                    }
+            default:
+                Text("error occured")
             }
-            
             Spacer()
         }
         .bold()
@@ -64,7 +92,12 @@ struct ColorSlider: View {
 
 struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSlider(color: "red")
+        ColorSlider(color: .red)
             .environmentObject(PlayModel())
     }
+}
+
+func playHaptic() {
+    let generator = UISelectionFeedbackGenerator()
+    generator.selectionChanged()
 }

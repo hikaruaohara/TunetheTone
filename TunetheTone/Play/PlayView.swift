@@ -61,9 +61,9 @@ struct PlayView: View {
                 
                 Spacer()
                 
-                ColorSlider(color: "red")
-                ColorSlider(color: "green")
-                ColorSlider(color: "blue")
+                ColorSlider(color: .red)
+                ColorSlider(color: .green)
+                ColorSlider(color: .blue)
                 
                 Spacer()
             }
