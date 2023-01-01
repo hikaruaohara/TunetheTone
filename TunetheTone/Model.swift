@@ -1,4 +1,5 @@
 import Foundation
+
 class Model: ObservableObject {
-    @Published var presentation = 0
+    @Published var presentation = "HomeView"
 }

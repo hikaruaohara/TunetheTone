@@ -44,7 +44,7 @@ struct PlayView: View {
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                         count -= 1
                         if count <= 0 {
-                            model.presentation = 1
+                            model.presentation = "ResultView"
                             timer.invalidate()
                             count = 15
                             isEnabled.toggle()

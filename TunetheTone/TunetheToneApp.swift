@@ -9,9 +9,11 @@ struct TunetheToneApp: App {
         WindowGroup {
             VStack {
                 switch model.presentation {
-                case 0:
+                case "HomeView":
+                    HomeView()
+                case "PlayView":
                     PlayView()
-                case 1:
+                case "ResultView":
                     ResultView()
                 default:
                     Text("error")

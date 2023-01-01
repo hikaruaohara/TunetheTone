@@ -38,7 +38,7 @@ struct ResultView: View {
                 Button("Next") {
                     playModel.correctColor = (0, 0, 0)
                     playModel.userColor = (0, 0, 0)
-                    model.presentation = 0
+                    model.presentation = "PlayView"
                 }
                 .foregroundColor(.white)
                 .font(.largeTitle)

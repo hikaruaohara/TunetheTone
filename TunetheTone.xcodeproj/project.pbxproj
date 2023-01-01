@@ -17,6 +17,7 @@
 		17D1C84028FDA5980049A36F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1C83F28FDA5980049A36F /* Model.swift */; };
 		17D1C84228FDA89C0049A36F /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1C84128FDA89C0049A36F /* AnswerCell.swift */; };
 		17D9E6E22957351D002516C1 /* RGBValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D9E6E12957351D002516C1 /* RGBValueCell.swift */; };
+		17E249CE2961F74900B64B0B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E249CD2961F74900B64B0B /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		17D1C84128FDA89C0049A36F /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		17D683BA29588CC3009090B4 /* TunetheTone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunetheTone.entitlements; sourceTree = "<group>"; };
 		17D9E6E12957351D002516C1 /* RGBValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValueCell.swift; sourceTree = "<group>"; };
+		17E249CD2961F74900B64B0B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				17D683BA29588CC3009090B4 /* TunetheTone.entitlements */,
+				17E249CC2961F72B00B64B0B /* Home */,
 				173A0C0A28FC3C2F000DABD4 /* Play */,
 				173A0C1228FC5BF5000DABD4 /* Result */,
 				173A0BF728FC2B2A000DABD4 /* TunetheToneApp.swift */,
@@ -103,6 +106,14 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		17E249CC2961F72B00B64B0B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17E249CD2961F74900B64B0B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +130,8 @@
 			dependencies = (
 			);
 			name = TunetheTone;
+			packageProductDependencies = (
+			);
 			productName = ColorMatch;
 			productReference = 173A0BF428FC2B2A000DABD4 /* TunetheTone.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +160,8 @@
 				Base,
 			);
 			mainGroup = 173A0BEB28FC2B2A000DABD4;
+			packageReferences = (
+			);
 			productRefGroup = 173A0BF528FC2B2A000DABD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E249CE2961F74900B64B0B /* HomeView.swift in Sources */,
 				173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */,
 				173A0C0E28FC420A000DABD4 /* PlayModel.swift in Sources */,
 				17D1C84228FDA89C0049A36F /* AnswerCell.swift in Sources */,
