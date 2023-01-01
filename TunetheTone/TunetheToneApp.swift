@@ -16,7 +16,7 @@ struct TunetheToneApp: App {
                 case "ResultView":
                     ResultView()
                 default:
-                    Text("error")
+                    Text("error occured")
                 }
             }
             .environmentObject(model)

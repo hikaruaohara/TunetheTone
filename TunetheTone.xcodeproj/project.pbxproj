@@ -34,6 +34,7 @@
 		17D683BA29588CC3009090B4 /* TunetheTone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunetheTone.entitlements; sourceTree = "<group>"; };
 		17D9E6E12957351D002516C1 /* RGBValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValueCell.swift; sourceTree = "<group>"; };
 		17E249CD2961F74900B64B0B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		17E249CF296219FA00B64B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		173A0BF628FC2B2A000DABD4 /* TunetheTone */ = {
 			isa = PBXGroup;
 			children = (
+				17E249CF296219FA00B64B0B /* Info.plist */,
 				17D683BA29588CC3009090B4 /* TunetheTone.entitlements */,
 				17E249CC2961F72B00B64B0B /* Home */,
 				173A0C0A28FC3C2F000DABD4 /* Play */,
@@ -329,6 +331,7 @@
 				DEVELOPMENT_TEAM = N38H3ZBTB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunetheTone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tune the Tone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,6 +339,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +365,7 @@
 				DEVELOPMENT_TEAM = N38H3ZBTB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunetheTone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tune the Tone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -368,6 +373,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
