@@ -1,4 +1,5 @@
 import Foundation
+
 class PlayModel: ObservableObject {
     @Published var correctColor = (red: 0.0, green: 0.0, blue: 0.0)
     @Published var userColor = (red: 0.0, green: 0.0, blue: 0.0)

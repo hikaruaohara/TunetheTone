@@ -9,18 +9,32 @@ struct HomeView: View {
             Color.black
                 .ignoresSafeArea()
             
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 130, height: 70)
-                .foregroundColor(.white)
-            
-            Button("Play!") {
-                model.presentation = "PlayView"
-                GKAccessPoint.shared.isActive = false
+            VStack {
+                Spacer()
+                Spacer()
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(width: 130, height: 70)
+                        .foregroundColor(.white)
+                    
+                    Button("Play") {
+                        model.presentation = "PlayView"
+                        GKAccessPoint.shared.isActive = false
+                    }
+                    .frame(width: 130, height: 70)
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
+                    .bold()
+                }
+                
+                Spacer()
+                
+                PlayersList()
+                
+                Spacer()
+                Spacer()
             }
-            .frame(width: 130, height: 70)
-            .foregroundColor(.black)
-            .font(.largeTitle)
-            .bold()
         }
         .onAppear {
             authenticateUser()

@@ -1,4 +1,5 @@
 import SwiftUI
+import GameKit
 
 @main
 struct TunetheToneApp: App {
@@ -11,6 +12,8 @@ struct TunetheToneApp: App {
                 switch model.presentation {
                 case "HomeView":
                     HomeView()
+                case "GameCenterView":
+                    GameCenterView(format: GKGameCenterViewControllerState.leaderboards)
                 case "PlayView":
                     PlayView()
                 case "ResultView":
