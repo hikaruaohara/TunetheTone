@@ -3,7 +3,7 @@ import GameKit
 import UIKit
 
 struct PlayersList: View {
-    @State var players: [Player] = [Player(name: "Hikaru", photo: UIImage(systemName: "person.crop.circle.fill")!, formattedScore: "98.7%", rank: 1), Player(name: "Momoka", photo: UIImage(systemName: "person.crop.circle.fill")!, formattedScore: "94.2%", rank: 2)]
+    @State var players: [Player] = []
     
     var body: some View {
         VStack {
