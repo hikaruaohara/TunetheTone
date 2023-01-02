@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		173A0BF828FC2B2A000DABD4 /* ColorMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0BF728FC2B2A000DABD4 /* ColorMatchApp.swift */; };
-		173A0BFA28FC2B2A000DABD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0BF928FC2B2A000DABD4 /* ContentView.swift */; };
+		173A0BF828FC2B2A000DABD4 /* TunetheToneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0BF728FC2B2A000DABD4 /* TunetheToneApp.swift */; };
 		173A0BFC28FC2B2B000DABD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */; };
 		173A0BFF28FC2B2B000DABD4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173A0BFE28FC2B2B000DABD4 /* Preview Assets.xcassets */; };
+		173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0728FC3B8E000DABD4 /* PlayView.swift */; };
+		173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */; };
+		173A0C0E28FC420A000DABD4 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C0D28FC420A000DABD4 /* PlayModel.swift */; };
+		173A0C1428FC5C07000DABD4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A0C1328FC5C07000DABD4 /* ResultView.swift */; };
+		1790F4D62963123200CB1A8F /* PlayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790F4D52963123200CB1A8F /* PlayersList.swift */; };
+		1790F4D82963227200CB1A8F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790F4D72963227200CB1A8F /* Player.swift */; };
+		17D1C84028FDA5980049A36F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1C83F28FDA5980049A36F /* Model.swift */; };
+		17D1C84228FDA89C0049A36F /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D1C84128FDA89C0049A36F /* AnswerCell.swift */; };
+		17D9E6E22957351D002516C1 /* RGBValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D9E6E12957351D002516C1 /* RGBValueCell.swift */; };
+		17E249CE2961F74900B64B0B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E249CD2961F74900B64B0B /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		173A0BF428FC2B2A000DABD4 /* ColorMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		173A0BF728FC2B2A000DABD4 /* ColorMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchApp.swift; sourceTree = "<group>"; };
-		173A0BF928FC2B2A000DABD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		173A0BF428FC2B2A000DABD4 /* TunetheTone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunetheTone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		173A0BF728FC2B2A000DABD4 /* TunetheToneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunetheToneApp.swift; sourceTree = "<group>"; };
 		173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173A0BFE28FC2B2B000DABD4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		173A0C0728FC3B8E000DABD4 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
+		173A0C0D28FC420A000DABD4 /* PlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
+		173A0C1328FC5C07000DABD4 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1790F4D52963123200CB1A8F /* PlayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersList.swift; sourceTree = "<group>"; };
+		1790F4D72963227200CB1A8F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		17D1C83F28FDA5980049A36F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		17D1C84128FDA89C0049A36F /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		17D683BA29588CC3009090B4 /* TunetheTone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunetheTone.entitlements; sourceTree = "<group>"; };
+		17D9E6E12957351D002516C1 /* RGBValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValueCell.swift; sourceTree = "<group>"; };
+		17E249CD2961F74900B64B0B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		17E249CF296219FA00B64B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +55,7 @@
 		173A0BEB28FC2B2A000DABD4 = {
 			isa = PBXGroup;
 			children = (
-				173A0BF628FC2B2A000DABD4 /* ColorMatch */,
+				173A0BF628FC2B2A000DABD4 /* TunetheTone */,
 				173A0BF528FC2B2A000DABD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +63,25 @@
 		173A0BF528FC2B2A000DABD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				173A0BF428FC2B2A000DABD4 /* ColorMatch.app */,
+				173A0BF428FC2B2A000DABD4 /* TunetheTone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		173A0BF628FC2B2A000DABD4 /* ColorMatch */ = {
+		173A0BF628FC2B2A000DABD4 /* TunetheTone */ = {
 			isa = PBXGroup;
 			children = (
-				173A0BF728FC2B2A000DABD4 /* ColorMatchApp.swift */,
-				173A0BF928FC2B2A000DABD4 /* ContentView.swift */,
+				17E249CF296219FA00B64B0B /* Info.plist */,
+				17D683BA29588CC3009090B4 /* TunetheTone.entitlements */,
+				17E249CC2961F72B00B64B0B /* Home */,
+				173A0C0A28FC3C2F000DABD4 /* Play */,
+				173A0C1228FC5BF5000DABD4 /* Result */,
+				173A0BF728FC2B2A000DABD4 /* TunetheToneApp.swift */,
+				17D1C83F28FDA5980049A36F /* Model.swift */,
 				173A0BFB28FC2B2B000DABD4 /* Assets.xcassets */,
 				173A0BFD28FC2B2B000DABD4 /* Preview Content */,
 			);
-			path = ColorMatch;
+			path = TunetheTone;
 			sourceTree = "<group>";
 		};
 		173A0BFD28FC2B2B000DABD4 /* Preview Content */ = {
@@ -67,12 +92,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		173A0C0A28FC3C2F000DABD4 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				173A0C0728FC3B8E000DABD4 /* PlayView.swift */,
+				173A0C0B28FC3CB3000DABD4 /* ColorSlider.swift */,
+				173A0C0D28FC420A000DABD4 /* PlayModel.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		173A0C1228FC5BF5000DABD4 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				173A0C1328FC5C07000DABD4 /* ResultView.swift */,
+				17D1C84128FDA89C0049A36F /* AnswerCell.swift */,
+				17D9E6E12957351D002516C1 /* RGBValueCell.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		17E249CC2961F72B00B64B0B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17E249CD2961F74900B64B0B /* HomeView.swift */,
+				1790F4D52963123200CB1A8F /* PlayersList.swift */,
+				1790F4D72963227200CB1A8F /* Player.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		173A0BF328FC2B2A000DABD4 /* ColorMatch */ = {
+		173A0BF328FC2B2A000DABD4 /* TunetheTone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 173A0C0228FC2B2B000DABD4 /* Build configuration list for PBXNativeTarget "ColorMatch" */;
+			buildConfigurationList = 173A0C0228FC2B2B000DABD4 /* Build configuration list for PBXNativeTarget "TunetheTone" */;
 			buildPhases = (
 				173A0BF028FC2B2A000DABD4 /* Sources */,
 				173A0BF128FC2B2A000DABD4 /* Frameworks */,
@@ -82,9 +137,11 @@
 			);
 			dependencies = (
 			);
-			name = ColorMatch;
+			name = TunetheTone;
+			packageProductDependencies = (
+			);
 			productName = ColorMatch;
-			productReference = 173A0BF428FC2B2A000DABD4 /* ColorMatch.app */;
+			productReference = 173A0BF428FC2B2A000DABD4 /* TunetheTone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 173A0BEF28FC2B2A000DABD4 /* Build configuration list for PBXProject "ColorMatch" */;
+			buildConfigurationList = 173A0BEF28FC2B2A000DABD4 /* Build configuration list for PBXProject "TunetheTone" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +168,13 @@
 				Base,
 			);
 			mainGroup = 173A0BEB28FC2B2A000DABD4;
+			packageReferences = (
+			);
 			productRefGroup = 173A0BF528FC2B2A000DABD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				173A0BF328FC2B2A000DABD4 /* ColorMatch */,
+				173A0BF328FC2B2A000DABD4 /* TunetheTone */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				173A0BFA28FC2B2A000DABD4 /* ContentView.swift in Sources */,
-				173A0BF828FC2B2A000DABD4 /* ColorMatchApp.swift in Sources */,
+				17E249CE2961F74900B64B0B /* HomeView.swift in Sources */,
+				173A0C0828FC3B8E000DABD4 /* PlayView.swift in Sources */,
+				173A0C0E28FC420A000DABD4 /* PlayModel.swift in Sources */,
+				17D1C84228FDA89C0049A36F /* AnswerCell.swift in Sources */,
+				1790F4D82963227200CB1A8F /* Player.swift in Sources */,
+				173A0C0C28FC3CB3000DABD4 /* ColorSlider.swift in Sources */,
+				17D1C84028FDA5980049A36F /* Model.swift in Sources */,
+				17D9E6E22957351D002516C1 /* RGBValueCell.swift in Sources */,
+				173A0BF828FC2B2A000DABD4 /* TunetheToneApp.swift in Sources */,
+				173A0C1428FC5C07000DABD4 /* ResultView.swift in Sources */,
+				1790F4D62963123200CB1A8F /* PlayersList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,22 +332,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TunetheTone/TunetheTone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ColorMatch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TunetheTone/Preview Content\"";
 				DEVELOPMENT_TEAM = N38H3ZBTB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunetheTone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tune the Tone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.hikaruaohara.ColorMatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hikaruaohara.TunetheTone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -292,22 +366,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TunetheTone/TunetheTone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ColorMatch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TunetheTone/Preview Content\"";
 				DEVELOPMENT_TEAM = N38H3ZBTB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunetheTone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tune the Tone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.hikaruaohara.ColorMatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hikaruaohara.TunetheTone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		173A0BEF28FC2B2A000DABD4 /* Build configuration list for PBXProject "ColorMatch" */ = {
+		173A0BEF28FC2B2A000DABD4 /* Build configuration list for PBXProject "TunetheTone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173A0C0028FC2B2B000DABD4 /* Debug */,
@@ -327,7 +407,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		173A0C0228FC2B2B000DABD4 /* Build configuration list for PBXNativeTarget "ColorMatch" */ = {
+		173A0C0228FC2B2B000DABD4 /* Build configuration list for PBXNativeTarget "TunetheTone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173A0C0328FC2B2B000DABD4 /* Debug */,
