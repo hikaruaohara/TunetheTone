@@ -11,18 +11,24 @@ struct HomeView: View {
             
             VStack {
                 Spacer()
+                
+                Text("Tune the Tone")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                
                 Spacer()
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 130, height: 70)
+                    RoundedRectangle(cornerRadius: 24)
+                        .frame(width: 130, height: 50)
                         .foregroundColor(.white)
                     
                     Button("Play") {
                         model.presentation = "PlayView"
                         GKAccessPoint.shared.isActive = false
                     }
-                    .frame(width: 130, height: 70)
+                    .frame(width: 130, height: 50)
                     .foregroundColor(.black)
                     .font(.largeTitle)
                     .bold()

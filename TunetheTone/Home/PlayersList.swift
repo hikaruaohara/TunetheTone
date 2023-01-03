@@ -7,27 +7,48 @@ struct PlayersList: View {
     
     var body: some View {
         VStack {
-            ForEach(players) { player in
+            ForEach(players.reversed()) { player in
                 HStack {
-                    Spacer()
-                    Text("\(player.rank)")
+                    Group {
+                        switch player.rank {
+                        case 1:
+                            Text("🥇")
+                        case 2:
+                            Text("🥈")
+                        case 3:
+                            Text("🥉")
+                        default:
+                            Text("　")
+                        }
+                    }
+                    .font(.largeTitle)
+                    .frame(width: 40)
                     
-                    Image(uiImage: player.photo)
-
-                    
-                    Text(player.name)
-                    
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    
-                    Text(player.formattedScore)
-                    
-                    Spacer()
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .stroke(lineWidth: 2.0)
+                            .frame(width: UIScreen.main.bounds.width - 70, height: 50)
+                            .foregroundColor(player.gamePlayerID == GKLocalPlayer.local.gamePlayerID ? .yellow : .white)
+                        
+                        HStack(spacing: 10) {
+                            Text("\(player.rank)")
+                                .padding(.leading, 10)
+                            
+                            Image(uiImage: player.photo)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 45)
+                                .clipShape(Circle())
+                            
+                            Text(player.name)
+                                .frame(maxWidth: 150, alignment: .leading)
+                            
+                            Text(player.formattedScore)
+                                .padding(.trailing, 10)
+                        }
+                        .frame(width: UIScreen.main.bounds.width - 70, height: 50)
+                    }
                 }
-                .frame(width: UIScreen.main.bounds.width - 30, height: 50)
-                .border(.white)
             }
         }
         .foregroundColor(.white)
@@ -39,13 +60,13 @@ struct PlayersList: View {
                         for entry in entries {
                             let player = entry.player
                             player.loadPhoto(for: .small) { image, _ in
-                                let newElement = Player(name: player.displayName, photo: image!, formattedScore: entry.formattedScore, rank: entry.rank)
+                                let newElement = Player(gamePlayerID: player.gamePlayerID, name: player.displayName, photo: image!, formattedScore: entry.formattedScore, rank: entry.rank)
                                 players.append(newElement)
                             }
                         }
                     }
                 })
-            }
+            }        
         }
     }
 }

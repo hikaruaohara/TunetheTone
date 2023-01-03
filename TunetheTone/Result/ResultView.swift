@@ -40,25 +40,37 @@ struct ResultView: View {
                 HStack {
                     Spacer()
                     
-                    Button("Next") {
-                        playModel.correctColor = (0, 0, 0)
-                        playModel.userColor = (0, 0, 0)
-                        model.presentation = "PlayView"
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .frame(width: 130, height: 50)
+                            .foregroundColor(.white)
+                        
+                        Button("Next") {
+                            playModel.correctColor = (0, 0, 0)
+                            playModel.userColor = (0, 0, 0)
+                            model.presentation = "PlayView"
+                        }
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .bold()
                     }
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .bold()
                     
                     Spacer()
                     
-                    Button("Home") {
-                        playModel.correctColor = (0, 0, 0)
-                        playModel.userColor = (0, 0, 0)
-                        model.presentation = "HomeView"
-                    }
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .frame(width: 130, height: 50)
+                            .foregroundColor(.white)
+                        
+                        Button("Home") {
+                            playModel.correctColor = (0, 0, 0)
+                            playModel.userColor = (0, 0, 0)
+                            model.presentation = "HomeView"
+                        }
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
                     .bold()
+                    }
                     
                     Spacer()
                 }

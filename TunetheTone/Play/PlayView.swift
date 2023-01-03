@@ -12,10 +12,17 @@ struct PlayView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("\(count)")
-                    .font(.largeTitle)
-                    .bold()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(lineWidth: 2)
+                        .foregroundColor(.white)
+                        .frame(width: 130, height: 50)
+                    
+                    Text("\(count)")
+                        .font(.largeTitle)
+                        .bold()
                     .foregroundColor(.white)
+                }
                 
                 Spacer()
                 
@@ -35,29 +42,36 @@ struct PlayView: View {
                 
                 Spacer()
                 
-                Button() {
-                    isEnabled.toggle()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 24)
+                        .foregroundColor(isEnabled ? .white : .gray)
+                        .frame(width: 130, height: 50)
                     
-                    playModel.correctColor = (Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)))
-                    playModel.userColor = (0, 0, 0)
-                    
-                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                        count -= 1
-                        if count <= 0 {
-                            model.presentation = "ResultView"
-                            timer.invalidate()
-                            count = 15
-                            isEnabled.toggle()
+                    Button() {
+                        isEnabled.toggle()
+                        
+                        playModel.correctColor = (Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)), Double(Int.random(in: 0...255)))
+                        playModel.userColor = (0, 0, 0)
+                        
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                            count -= 1
+                            if count <= 0 {
+                                model.presentation = "ResultView"
+                                timer.invalidate()
+                                count = 15
+                                isEnabled.toggle()
+                            }
                         }
+                    } label: {
+                        Text("Start")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.black)
+                            .opacity(isEnabled ? 1 : 0.5)
                     }
-                } label: {
-                    Text("Start")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.white)
-                        .opacity(isEnabled ? 1 : 0.5)
+                    .frame(width: 130, height: 50)
+                    .disabled(!isEnabled)
                 }
-                .disabled(!isEnabled)
                 
                 Spacer()
                 
