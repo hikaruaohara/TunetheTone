@@ -31,7 +31,7 @@ struct ResultView: View {
                 (Text(String(format: "%.1f%% ", matchingRate)).foregroundColor(.yellow) + Text(" Matched!!"))
                     .foregroundColor(.white)
                     .font(.largeTitle)
-                    .bold()
+                    .fontWeight(.bold)
 
                 Spacer()
                 Spacer()
@@ -52,7 +52,7 @@ struct ResultView: View {
                         }
                         .foregroundColor(.black)
                         .font(.largeTitle)
-                        .bold()
+                        .fontWeight(.bold)
                     }
                     
                     Spacer()
@@ -69,7 +69,7 @@ struct ResultView: View {
                         }
                         .foregroundColor(.black)
                         .font(.largeTitle)
-                    .bold()
+                        .fontWeight(.bold)
                     }
                     
                     Spacer()

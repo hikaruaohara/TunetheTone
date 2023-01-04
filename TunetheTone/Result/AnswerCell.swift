@@ -32,7 +32,7 @@ struct AnswerCell: View {
                 
                 Spacer()
             }
-            .bold()
+            .fontWeight(.bold)
         case .user:
             let colors = playModel.userColor
             VStack {
@@ -68,7 +68,7 @@ struct AnswerCell: View {
                 
                 Spacer()
             }
-            .bold()
+            .fontWeight(.bold)
         }
     }
 }

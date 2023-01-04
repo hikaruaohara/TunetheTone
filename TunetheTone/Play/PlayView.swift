@@ -20,8 +20,8 @@ struct PlayView: View {
                     
                     Text("\(count)")
                         .font(.largeTitle)
-                        .bold()
-                    .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
                 }
                 
                 Spacer()
@@ -65,7 +65,7 @@ struct PlayView: View {
                     } label: {
                         Text("Start")
                             .font(.largeTitle)
-                            .bold()
+                            .fontWeight(.bold)
                             .foregroundColor(.black)
                             .opacity(isEnabled ? 1 : 0.5)
                     }

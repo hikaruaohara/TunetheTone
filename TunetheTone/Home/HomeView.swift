@@ -31,10 +31,14 @@ struct HomeView: View {
                     .frame(width: 130, height: 50)
                     .foregroundColor(.black)
                     .font(.largeTitle)
-                    .bold()
+                    .fontWeight(.bold)
                 }
                 
                 Spacer()
+                
+                Text("👑Weekly Ranking👑")
+                    .foregroundColor(.white)
+                    .font(.title)
                 
                 PlayersList()
                 

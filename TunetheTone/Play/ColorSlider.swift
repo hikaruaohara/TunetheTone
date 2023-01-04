@@ -93,7 +93,7 @@ struct ColorSlider: View {
             Spacer()
         }
         .font(.title)
-        .bold()
+        .fontWeight(.bold)
     }
 }
 
