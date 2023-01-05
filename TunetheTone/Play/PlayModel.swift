@@ -3,15 +3,16 @@ import Foundation
 class PlayModel: ObservableObject {
     @Published var correctColor = (red: 0.0, green: 0.0, blue: 0.0)
     @Published var userColor = (red: 0.0, green: 0.0, blue: 0.0)
+    let maxDistance = sqrt(pow(255, 2) * 3)
     
-    func getScore() -> Float {
-        let score = fabs(correctColor.red - userColor.red) + fabs(correctColor.green - userColor.green) + fabs(correctColor.blue - userColor.blue)
+    func getDistance() -> Double {
+        let score = sqrt(pow(correctColor.red - userColor.red, 2) + pow(correctColor.green - userColor.green, 2) + pow(correctColor.blue - userColor.blue, 2))
         
-        return Float(score)
+        return score
     }
     
     func getMatchingRate() -> Float {
-        let matchingRate = 100 - getScore() / 7.65
+        let matchingRate = (1 - getDistance() / maxDistance) * 100
         
         return Float(matchingRate)
     }
