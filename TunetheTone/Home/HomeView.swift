@@ -13,9 +13,8 @@ struct HomeView: View {
                 Spacer()
                 
                 Text("Tune the Tone")
-                    .fontWeight(.heavy)
                     .foregroundColor(.white)
-                    .font(.largeTitle)
+                    .font(.largeTitle.weight(.heavy))
                 
                 Spacer()
                 
@@ -30,8 +29,7 @@ struct HomeView: View {
                     }
                     .frame(width: 130, height: 50)
                     .foregroundColor(.black)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                    .font(.largeTitle.weight(.bold))
                 }
                 
                 Spacer()

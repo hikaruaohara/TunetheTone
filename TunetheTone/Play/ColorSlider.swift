@@ -21,7 +21,7 @@ struct ColorSlider: View {
                 Spacer()
                 
                 Slider(value: $playModel.userColor.red, in: 0 ... 255, step: 1)
-                    .tint(color)
+                    .accentColor(color)
                     .onChange(of: playModel.userColor.red) { _ in
                         playSelectionHaptic()
                     }
@@ -47,7 +47,7 @@ struct ColorSlider: View {
                 Spacer()
                 
                 Slider(value: $playModel.userColor.green, in: 0 ... 255, step: 1)
-                    .tint(color)
+                    .accentColor(color)
                     .onChange(of: playModel.userColor.green) { _ in
                         playSelectionHaptic()
                     }
@@ -73,7 +73,7 @@ struct ColorSlider: View {
                 Spacer()
                 
                 Slider(value: $playModel.userColor.blue, in: 0 ... 255, step: 1)
-                    .tint(color)
+                    .accentColor(color)
                     .onChange(of: playModel.userColor.blue) { _ in
                         playSelectionHaptic()
                     }
@@ -92,8 +92,7 @@ struct ColorSlider: View {
             }
             Spacer()
         }
-        .font(.title)
-        .fontWeight(.bold)
+        .font(.title.weight(.bold))
     }
 }
 

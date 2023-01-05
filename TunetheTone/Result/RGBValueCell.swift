@@ -41,6 +41,7 @@ struct RGBValueCell: View {
                 .foregroundColor(.blue)
             }
         }
+        .font(.body.weight(.bold))
     }
 }
 

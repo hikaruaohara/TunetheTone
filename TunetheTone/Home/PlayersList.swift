@@ -47,13 +47,13 @@ struct PlayersList: View {
                                 Text(player.formattedScore)
                                     .padding(.trailing, 10)
                             }
+                            .font(.body.weight(.bold))
                             .frame(width: UIScreen.main.bounds.width - 70, height: 50)
                         }
                     }
                 }
             }
             .foregroundColor(.white)
-            .fontWeight(.bold)
             .onAppear {
                 GKLeaderboard.loadLeaderboards(IDs: ["WeeklyBestScore"]) { leaderboards, _ in
                     leaderboards?[0].loadEntries(for: .global, timeScope: .allTime, range: NSRange(location: 1, length: 5), completionHandler: { playEntry, entries, _, _ in

@@ -19,8 +19,7 @@ struct PlayView: View {
                         .frame(width: 130, height: 50)
                     
                     Text("\(count)")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
                 }
                 
@@ -56,6 +55,7 @@ struct PlayView: View {
                         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                             count -= 1
                             if count <= 0 {
+                                playNotificationHaptic()
                                 model.presentation = "ResultView"
                                 timer.invalidate()
                                 count = 15
@@ -64,8 +64,7 @@ struct PlayView: View {
                         }
                     } label: {
                         Text("Start")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
+                            .font(.largeTitle.weight(.bold))
                             .foregroundColor(.black)
                             .opacity(isEnabled ? 1 : 0.5)
                     }
@@ -91,4 +90,9 @@ struct PlayView_Previews: PreviewProvider {
             .environmentObject(Model())
             .environmentObject(PlayModel())
     }
+}
+
+func playNotificationHaptic() {
+    let generator = UINotificationFeedbackGenerator()
+    generator.notificationOccurred(.success)
 }

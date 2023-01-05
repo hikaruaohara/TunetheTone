@@ -16,7 +16,7 @@ struct AnswerCell: View {
                 Spacer()
                 Text("Correct\nAnswer")
                     .multilineTextAlignment(.center)
-                    .font(.largeTitle)
+                    .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
                 
                 Spacer()
@@ -32,43 +32,46 @@ struct AnswerCell: View {
                 
                 Spacer()
             }
-            .fontWeight(.bold)
         case .user:
-            let colors = playModel.userColor
+            let userColor = playModel.userColor
+            let correctColor = playModel.correctColor
             VStack {
                 Spacer()
                 Text("Your\nAnswer")
                     .multilineTextAlignment(.center)
-                    .font(.largeTitle)
+                    .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
                 
                 Spacer()
                 
                 Circle()
-                    .foregroundColor(Color(red: colors.red / 255, green: colors.green / 255, blue: colors.blue / 255))
+                    .foregroundColor(Color(red: userColor.red / 255, green: userColor.green / 255, blue: userColor.blue / 255))
                 
                 Spacer()
                 
                 VStack (alignment: .leading) {
                     HStack {
-                        RGBValueCell(color: .red, value: colors.red)
-                        Text(getErrorText(userValue: colors.red, correctValue:playModel.correctColor.red))
+                        RGBValueCell(color: .red, value: userColor.red)
+                        Text(getErrorText(userValue: userColor.red, correctValue: correctColor.red))
+                            .font(.body.weight(.bold))
                     }
                     
                     HStack {
-                        RGBValueCell(color: .green, value: colors.green)
-                        Text(getErrorText(userValue: colors.green, correctValue:playModel.correctColor.green))
+                        RGBValueCell(color: .green, value: userColor.green)
+                        Text(getErrorText(userValue: userColor.green, correctValue: correctColor.green))
+                            .font(.body.weight(.bold))
                     }
                     
                     HStack {
-                        RGBValueCell(color: .blue, value: colors.blue)
-                        Text(getErrorText(userValue: colors.blue, correctValue:playModel.correctColor.blue))
+                        RGBValueCell(color: .blue, value: userColor.blue)
+                        Text(getErrorText(userValue: userColor.blue, correctValue: correctColor.blue))
+                            .font(.body.weight(.bold))
                     }
                 }
+                .foregroundColor(.white)
                 
                 Spacer()
             }
-            .fontWeight(.bold)
         }
     }
 }

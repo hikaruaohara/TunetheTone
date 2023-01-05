@@ -30,8 +30,7 @@ struct ResultView: View {
                 
                 (Text(String(format: "%.1f%% ", matchingRate)).foregroundColor(.yellow) + Text(" Matched!!"))
                     .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                    .font(.largeTitle.weight(.bold))
 
                 Spacer()
                 Spacer()
@@ -51,8 +50,7 @@ struct ResultView: View {
                             model.presentation = "PlayView"
                         }
                         .foregroundColor(.black)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.largeTitle.weight(.bold))
                     }
                     
                     Spacer()
@@ -68,8 +66,7 @@ struct ResultView: View {
                             model.presentation = "HomeView"
                         }
                         .foregroundColor(.black)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.largeTitle.weight(.bold))
                     }
                     
                     Spacer()
