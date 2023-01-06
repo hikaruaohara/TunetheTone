@@ -14,18 +14,12 @@ struct ResultView: View {
             VStack {
                 Spacer()
                 
-                HStack {
-                    Spacer()
-                    
+                HStack {                    
                     AnswerCell(target: .correct)
-                        .frame(maxWidth: UIScreen.main.bounds.width / 2)
-                    
-                    Spacer()
+                        .frame(maxWidth: UIScreen.main.bounds.width / 2 - 1)
                     
                     AnswerCell(target: .user)
-                        .frame(maxWidth: UIScreen.main.bounds.width / 2)
-                    
-                    Spacer()
+                        .frame(maxWidth: UIScreen.main.bounds.width / 2 - 1)
                 }                
                 
                 (Text(String(format: "%.1f%% ", matchingRate)).foregroundColor(.yellow) + Text(" Matched!!"))

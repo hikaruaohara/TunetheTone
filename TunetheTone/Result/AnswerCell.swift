@@ -18,6 +18,7 @@ struct AnswerCell: View {
                     .multilineTextAlignment(.center)
                     .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
+                    .frame(width: 130, height: 100)
                 
                 Spacer()
                 
@@ -41,6 +42,7 @@ struct AnswerCell: View {
                     .multilineTextAlignment(.center)
                     .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
+                    .frame(width: 130, height: 100)
                 
                 Spacer()
                 
@@ -78,7 +80,7 @@ struct AnswerCell: View {
 
 struct AnswerCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerCell(target: .user)
+        AnswerCell(target: .correct)
             .environmentObject(PlayModel())
     }
 }
